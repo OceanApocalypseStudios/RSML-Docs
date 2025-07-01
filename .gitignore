@@ -1,0 +1,11 @@
+# Backups
+*.bak
+*~
+[Bb]ackup/*
+*__NOTYET
+
+# Configs
+*.vscode
+!.vscode/tasks.json
+*.idea
+*.vs

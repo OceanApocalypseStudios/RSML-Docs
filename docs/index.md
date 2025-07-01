@@ -5,7 +5,7 @@ RSML (short for Red Sea Markup Language) can currently be used in C# and Python,
 
 > **This documentation is licensed under the GNU Free Documentation License.**
 >
-> Copyright (c)  2025  OceanApocalypseStudios
+> Copyright &copy; 2025  OceanApocalypseStudios
 > 
 > Permission is granted to copy, distribute and/or modify this document
 > under the terms of the GNU Free Documentation License, Version 1.3

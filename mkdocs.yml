@@ -1,0 +1,7 @@
+site_name: Red Sea Markup Language
+theme: material
+
+nav:
+  - Home: index.md
+  - Contributing: contributing.md
+  - FAQ: faq.md

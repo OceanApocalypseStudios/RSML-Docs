@@ -9,3 +9,6 @@
 !.vscode/tasks.json
 *.idea
 *.vs
+
+# Site (on main)
+site/

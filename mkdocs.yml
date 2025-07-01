@@ -3,5 +3,7 @@ theme: material
 
 nav:
   - Home: index.md
+  - Language: language/index.md
   - Contributing: contributing.md
   - FAQ: faq.md
+  - Migrate from MFRoad: migration.md

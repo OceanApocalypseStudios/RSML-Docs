@@ -12,6 +12,10 @@ RSML (short for Red Sea Markup Language) can currently be used in C# and Python,
 > or any later version published by the Free Software Foundation;
 > with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
 
+<br />
+
+> ⚠ The documentation for RSML is a work in progress.
+
 <!-- remove this crap
 
 ## Commands

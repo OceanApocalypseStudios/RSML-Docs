@@ -3,7 +3,32 @@ theme: material
 
 nav:
   - Home: index.md
-  - Language: language/index.md
+  - Language:
+    - RSML as a Language: language/index.md
+    - Syntax: language/syntax.md
+    - Customizable Behaviors: language/behaviors.md
+    - Standards:
+      - Getting Started: language/standards/index.md
+      - Official 25: language/standards/official25.md
+      - Road-Like: language/standards/roadlike.md
+  - API:
+    - RSML as an API: api/index.md
+    - C#:
+      - Getting Started: api/csharp/index.md
+      - Reference: api/csharp/reference.md
+      - Demos: api/csharp/demos.md
+    - Python:
+      - Getting Started: api/python/index.md
+      - Reference: api/python/reference.md
+      - Demos: api/python/demos.md
+    - C++:
+      - Getting Started: api/cpp/index.md
+      - Reference: api/cpp/reference.md
+      - Demos: api/cpp/demos.md
+  - CLI:
+    - RSML as a CLI: cli/index.md
+    - Commands: cli/commands.md
+    - Real-world usage: cli/examples.md
+  - Migrate from MFRoad: migration.md
   - Contributing: contributing.md
   - FAQ: faq.md
-  - Migrate from MFRoad: migration.md

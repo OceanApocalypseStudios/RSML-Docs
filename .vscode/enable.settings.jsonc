@@ -5,5 +5,8 @@
     // also you need:
     // https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker
     // and at least one english locale (can be british, american, canadian, I don't really care)
-    "cSpell.enabled": true
+    "cSpell.enabled": true,
+    "cSpell.words": [
+        "RSML"
+    ]
 }

@@ -39,7 +39,11 @@ theme:
     - navigation.instant.progress
     - navigation.expand
     - navigation.path
-  #- navigation.tabs # if we ever go with tabs instead of navigation menu. looks odd tho. i don't like it
+    - content.tooltips
+    - content.code.copy # for stealing code :)
+    - content.code.annotate
+    #- navigation.tabs # if we ever go with tabs instead of navigation menu. looks odd tho. i don't like it
+  
   logo: img/logo.png
   favicon: img/favicon.ico
   icon:
@@ -96,8 +100,37 @@ extra:
 extra_css:
   - stylesheets/extra.css
 
+# Folders to watch for (outside docs)
+watch:
+  - includes
+
 # Markdown extensions
 markdown_extensions:
+  - attr_list
+  # better formatting
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  # admonitions
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  # abbreviations
+  - abbr
+  # definition lists - pretty good
+  - def_list
+  # snippets
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+  - pymdownx.tasklist:
+      custom_checkbox: true # better checkboxes
+  # better image manipulation
+  - md_in_html
+  - pymdownx.blocks.caption
+  # emojis
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg

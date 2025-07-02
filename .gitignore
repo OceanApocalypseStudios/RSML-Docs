@@ -1,14 +1,17 @@
 # Backups
 *.bak
 *~
-[Bb]ackup/*
+[Bb]ackup/
 *__NOTYET
 
 # Configs
-*.vscode
+.vscode/
 !.vscode/tasks.json
-*.idea
-*.vs
+.idea/
+.vs/
 
 # Site (on main)
 site/
+
+# Material Cache
+.cache/

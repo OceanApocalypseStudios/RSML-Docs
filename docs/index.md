@@ -1,4 +1,7 @@
 # Welcome to Red Sea Markup Language Docs
+!!! warning
+    The documentation for RSML is a work in progress.
+
 **Red Sea Markup Language** is **the** powerful and robust fork of [MF's CrossRoad Solution](https://mf366-coding.github.io/documentation/mfroad/mfroad_1.0.html), a language designed to dynamically interpret different logic paths based on the local host OS and CPU architecture.
 
 RSML (short for Red Sea Markup Language) can currently be used in C# and Python, as well as in its own CLI.
@@ -12,7 +15,10 @@ RSML (short for Red Sea Markup Language) can currently be used in C# and Python,
 > or any later version published by the Free Software Foundation;
 > with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
 
-<br />
+## Useful Links
+To further enhance your experience with RSML, we offer a list of useful links in this journey through our logic-heavy markup language.
 
-> ⚠ The documentation for RSML is a work in progress.
-
+* [**GitHub Repository:**](https://github.com/OceanApocalypseStudios/RedSeaMarkupLanguage/) the official repository for RSML.
+* [**RSML at NuGet:**](https://www.nuget.org/packages/RSML/) the official RSML package for C#.
+* [**RSML for Python:**](https://github.com/OceanApocalypseStudios/RSML.Python/) the repository for `rsml-python`.
+* [**rsml-docs:**](https://github.com/OceanApocalypseStudios/rsml-docs/) the repository for RSML's Docs - useful if you wish to build the docs locally.

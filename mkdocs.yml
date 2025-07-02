@@ -2,22 +2,54 @@
 site_url: https://oceanapocalypsestudios.github.io/rsml-docs/
 site_name: Red Sea Markup Language
 
+# Linking to repo
+repo_url: https://github.com/OceanApocalypseStudios/rsml-docs/
+
 # Theming
 theme:
   name: material
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: amber
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to system preference mode
+  
+  language: en
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.expand
+    - navigation.path
+  #- navigation.tabs # if we ever go with tabs instead of navigation menu. looks odd tho. i don't like it
   logo: img/logo.png
   favicon: img/favicon.ico
   icon:
-    previous: fontawesome/solid/angles-left
-    next: fontawesome/solid/angles-right
-    menu: octicons/sidebar-expand-16
-    #menu: octicons/sidebar-collapse-16
     top: fontawesome/solid/angles-up
-    share: octicons/share-android-16
+    repo: fontawesome/brands/github
 
 # Material Plugins
 plugins:
-  - social
+  - social # Embeds, basically 
+  - search # Global docs searching
 
 # Navigation
 # All documentation must be included here, as otherwise,
@@ -59,3 +91,13 @@ extra:
   # Material does not use native favicons.
   # Refer to 'theme' section.
   favicon: img/favicon.ico
+
+# CSS for advanced customization
+extra_css:
+  - stylesheets/extra.css
+
+# Markdown extensions
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences

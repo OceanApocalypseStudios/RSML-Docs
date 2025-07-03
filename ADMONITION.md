@@ -8,6 +8,8 @@
 !!! danger
 ```
 
+<!-- what did i literally say about me forgetting lol -->
+
 ## Available Types
 
 |  **Type**  |   **Color (Dark Mode)**   |

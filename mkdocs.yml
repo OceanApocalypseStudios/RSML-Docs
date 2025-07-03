@@ -35,14 +35,28 @@ theme:
   
   language: en
   features:
+    # Linked tabs
+    - content.tabs.link
+
+    # Instant navigation
     - navigation.instant
     - navigation.instant.progress
+
+    # Navigation expanded by default
     - navigation.expand
+
+    # Show navigation path
     - navigation.path
+
+    # Tooltips
     - content.tooltips
+
+    # Navigation Tabs
+    #- navigation.tabs
+
+    # Code blocks
     - content.code.copy # for stealing code :)
     - content.code.annotate
-    #- navigation.tabs # if we ever go with tabs instead of navigation menu. looks odd tho. i don't like it
   
   logo: img/logo.png
   favicon: img/favicon.ico
@@ -62,7 +76,6 @@ nav:
   - Home: index.md
   - Language:
     - RSML as a Language: language/index.md
-    - Syntax: language/syntax.md
     - Customizable Behaviors: language/behaviors.md
     - Standards:
       - Getting Started: language/standards/index.md
@@ -70,18 +83,19 @@ nav:
       - Road-Like: language/standards/roadlike.md
   - API:
     - RSML as an API: api/index.md
+    - Guides:
+      - Getting Started: api/guides/index.md
+      - Evaluating RSML from file: api/guides/eval-from-file-1.md
+    - Usage Demos: api/demos.md 
     - C#:
       - Getting Started: api/csharp/index.md
       - Reference: api/csharp/reference.md
-      - Demos: api/csharp/demos.md
     - Python:
       - Getting Started: api/python/index.md
       - Reference: api/python/reference.md
-      - Demos: api/python/demos.md
     - C++:
       - Getting Started: api/cpp/index.md
       - Reference: api/cpp/reference.md
-      - Demos: api/cpp/demos.md
   - CLI:
     - RSML as a CLI: cli/index.md
     - Commands: cli/commands.md
@@ -106,31 +120,57 @@ watch:
 
 # Markdown extensions
 markdown_extensions:
+  # HTML Attributes in Markdown
   - attr_list
-  # better formatting
+
+  # Markdown
+  - pymdownx.details
+
+  # Tabbed content
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+  # Better Formatting
   - pymdownx.critic
   - pymdownx.caret
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
-  # admonitions
+
+  # Admonitions
   - admonition
-  - pymdownx.details
-  - pymdownx.superfences
+
   # abbreviations
   - abbr
+
+  # Code blocks
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+
   # definition lists - pretty good
   - def_list
+
   # snippets
   - pymdownx.snippets:
       auto_append:
         - includes/abbreviations.md
+  
+  # tasklists
   - pymdownx.tasklist:
       custom_checkbox: true # better checkboxes
-  # better image manipulation
+  
+  # Better Image Manipulation
   - md_in_html
   - pymdownx.blocks.caption
-  # emojis
+
+  # Tables
+  - tables
+
+  # Emojis
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg

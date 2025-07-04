@@ -87,21 +87,50 @@ Below is a table with the operators, their [tokens](#extensible-functionality-pa
 | Secondary     | `||`                                        | Non-standardized.                                                       | Outputs `val` to the `stdout`.                                      |
 | Tertiary      | `^!`                                        | Non-standardized.                                                       | Throws an error _(error message set to `val`)_ and ends evaluation. |
 
-## Evaluation Process
+## Evaluation Process Flow
+See also: [Logic Path examples](#logic-paths) | [Special Action handling](#special-actions)
+
 ??? info "Strictly markup"
     Despite the usage of wording such as _"return"_ and _"interpret"_, RSML is **purely declarative** - it can **not** execute, compile or transpile code.
 
-RSML is evaluated from **start to finish**, meaning that the **very first** logic path **with a primary operator in it** that matches will be used and the evaluation ends there. All the logic beyond that point is ignored completely.
+RSML is evaluated from **start to finish** _[see Advanced Representation of the Process Flow](#advanced-representation)_, meaning that the **very first** logic path **with a primary operator in it** that matches will be used and the evaluation ends there. All the logic beyond that point is ignored completely.
 
+### Simplified Representation
 ``` mermaid
-graph LR
-  A[Start] --> B[Check next line];
-  B -->F{Is a match?};
+---
+title: Simplified Representation of the Evaluation Process Flow
+---
+flowchart LR
+  A[Start] --> B[Next line];
+  B -->F{Match?};
   F -->|No| B;
-  F -->|Yes| C{Contains primary operator?};
-  C -->|Yes| D[Return value and end];
-  C -->|No| E[Run the operator's functionality];
+  F -->|Yes| C{Primary operator?};
+  C -->|Yes| D[Return value + end];
+  C -->|No| E[Execute operator];
   E -->B;
+```
+
+### Advanced Representation
+``` mermaid
+---
+title: Advanced Representation of the Evaluation Process Flow
+---
+flowchart LR
+  A[Start] --> B[Next line];
+  B -->C{Valid?};
+  C -->|Yes| D{Type?};
+  C -->|No| B;
+  D -->|Logic| E{Match?};
+  D -->|Action| F{Ends eval?};
+  D -->|Comment| B;
+  E -->|Yes| G{Primary op?};
+  E -->|No| B;
+  F -->|Yes| H[Finish];
+  F -->|No| I[Run action];
+  I -->B;
+  G -->|Yes| J[Return + end];
+  G -->|No| K[Execute operator];
+  K -->B;
 ```
 
 ??? note "Return operator"
@@ -160,7 +189,7 @@ Things worth mentioning:
 Special Actions ([see Language Specification](#language-specification)) are a partially-standardized feature of RSML, being responsible for evaluation-time modification to RSML aspects.
 
 !!! info "Built-in Special Action"
-    `@EndAll` is the only **immutable, built-in** special action in RSML:
+    [As noted in the language specification section](#language-specification), `@EndAll` is the only **immutable, built-in** special action in RSML:
     
     * **Name cannot be changed:** Must always be `@EndAll` (case-sensitive)
     * **Accepts no arguments:** `@EndAll` is always argument-less, so any arguments given will be ignored.
@@ -249,8 +278,15 @@ This is a quick reference sheet on RSML's syntax.
     # Special Actions
     @<action-name> [<argument>]
     @MyAction MyValue
+    @EndAll
 
     # Comments
     # at the start of a sentence
     # this is a comment
+
+    # Spacing is flexible
+    win.+ -> "valid"
+    .+-x64          ->"valid"
+    linux.*->     "valid"
+    osx-arm64->"valid"
     ```

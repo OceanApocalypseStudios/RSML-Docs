@@ -52,7 +52,7 @@ win.+ -> "This logic path matches any Windows system" # (1)!
 
 ## Language Specification
 !!! warning "Non-standardized"
-    Red Sea is **not** a [standardized](standards/index.md) language. **For the sake of examplifying without getting too technical**, **we'll be using the [**official-25**](standards/official25.md) standard** in most of the documentation, as it's the closest to an official specification.
+    Red Sea is **not** a [standardized](standards/index.md) language. **For the sake of examplifying without getting too technical**, **we'll be using the [**official-25**](standards/official-25.md) standard** in most of the documentation, as it's the closest to an official specification.
 
 **Red Sea** is quite a simple language, **but the lack of an official specification** means behavior may vary across developer's implementations.
 
@@ -68,7 +68,7 @@ The following features are fully standardized and ==cannot be altered in any way
 ### Extensible Functionality (Partially Standardized :yellow_circle:)
 The following features are partially standardized. For each feature, it's explained which part is standardized and which one isn't.
 
-* **Special Actions.** Special actions can be added and customized by language standards, but the built-in one (`#!python @EndAll`) cannot be removed or changed in *any* way.
+* **[Special Actions.](#special-actions)** Special actions can be added and customized by language standards, but the built-in one (`#!python @EndAll`) cannot be removed or changed in *any* way.
 * **[Operators](#operators).** Language standards can pick which tokens (including common words) they wish to use as operators, but operators are still partially standardized as there must always be **three operators** and only the behaviors for the secondary and tertiary can be altered - the **primary operator** will **always** be the return operator.
 
 ### Implementation-specific Functionality (Non-Standardized :red_circle:)
@@ -79,7 +79,7 @@ The following features are not standardized at all and can be customized at free
 ## Operators
 In RSML, there are always **three operators**, named **primary**, **secondary** and **tertiary**.
 
-Below is a table with the operators, their [tokens](#extensible-functionality-partially-standardized-yellow-circle-) in `official-25` and what they actually do. For all of these, consider `val` as the argument they're passed.
+Below is a table with the operators, their [tokens](#extensible-functionality-partially-standardized) in `official-25` and what they actually do. For all of these, consider `val` as the argument they're passed.
 
 | Operator Name | Operator Token (according to `official-25`) | Functionality                                                           | Functionality (according to `official-25`)                          |
 | ------------- | ------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------- |

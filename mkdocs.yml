@@ -1,4 +1,10 @@
-# Site Setup
+# Copyright (c)  2025  OceanApocalypseStudios
+# Permission is granted to copy, distribute and/or modify this document
+# under the terms of the GNU Free Documentation License, Version 1.3
+# or any later version published by the Free Software Foundation;
+# with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+
+# Global site Setup
 site_url: https://oceanapocalypsestudios.github.io/rsml-docs/
 site_name: Red Sea Markup Language
 
@@ -8,6 +14,7 @@ repo_url: https://github.com/OceanApocalypseStudios/rsml-docs/
 # Theming
 theme:
   name: material
+  custom_dir: overrides
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
@@ -35,6 +42,15 @@ theme:
   
   language: en
   features:
+    # Footer
+    - navigation.footer
+
+    # Search sharing
+    - search.share
+
+    # Back to top button
+    - navigation.top
+
     # Linked tabs
     - content.tabs.link
 
@@ -76,7 +92,6 @@ nav:
   - Home: index.md
   - Language:
     - RSML as a Language: language/index.md
-    - Customizable Behaviors: language/behaviors.md
     - Standards:
       - Getting Started: language/standards/index.md
       - Official 25: language/standards/official25.md
@@ -110,6 +125,17 @@ extra:
   # Refer to 'theme' section.
   favicon: img/favicon.ico
 
+  # Versioning
+  version:
+    provider: mike
+
+  # Social links
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/OceanApocalypseStudios
+    - icon: material/web
+      link: https://oceanapocalypsestudios.github.io/
+
 # CSS for advanced customization
 extra_css:
   - stylesheets/extra.css
@@ -123,11 +149,20 @@ markdown_extensions:
   # HTML Attributes in Markdown
   - attr_list
 
+  # Table of contents
+  - toc:
+      permalink: true
+      title: On this page
+
   # Markdown
   - pymdownx.details
 
   # Tabbed content
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
 
@@ -174,3 +209,9 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+# Copyright (c)  2025  OceanApocalypseStudios
+# Permission is granted to copy, distribute and/or modify this document
+# under the terms of the GNU Free Documentation License, Version 1.3
+# or any later version published by the Free Software Foundation;
+# with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.

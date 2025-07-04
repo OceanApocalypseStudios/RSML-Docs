@@ -14,7 +14,7 @@
         {
             "label": "Serve Docs",
             "type": "shell",
-            "command": "mkdocs serve"
+            "command": "mkdocs serve -o"
         },
         {
             "label": "Deploy Docs (GitHub Pages)",

@@ -17,7 +17,7 @@ The `.rsml` file extension is also fine, but `.rsea` is preferred.
 ## Evaluation
 The _"evaluation"_ is the act of going through every **logic path** and **special action** and evaluate the first, while running the second.
 
-If an evaluation encounters a **primary operator** ([see Operators](#operators)) in a true logic path, its value is returned and evaluation ends there.
+If an evaluation encounters a **primary operator** _([see Operators](#operators))_ in a true logic path, its value is returned and evaluation ends there.
 
 ## Use of MSBuild RIDs
 [MSBuild Runtime Identifiers](https://learn.microsoft.com/en-us/dotnet/core/rid-catalog) are used for identifying systems and CPU architectures in Red Sea.
@@ -88,12 +88,14 @@ Below is a table with the operators, their [tokens](#extensible-functionality-pa
 | Tertiary      | `^!`                                        | Non-standardized.                                                       | Throws an error _(error message set to `val`)_ and ends evaluation. |
 
 ## Evaluation Process Flow
-See also: [Logic Path examples](#logic-paths) | [Special Action handling](#special-actions)
+!!! tip "See also"
+    * [Logic Path examples](#logic-paths)
+    * [Special Action handling](#special-actions)
 
 ??? info "Strictly markup"
     Despite the usage of wording such as _"return"_ and _"interpret"_, RSML is **purely declarative** - it can **not** execute, compile or transpile code.
 
-RSML is evaluated from **start to finish** _[see Advanced Representation of the Process Flow](#advanced-representation)_, meaning that the **very first** logic path **with a primary operator in it** that matches will be used and the evaluation ends there. All the logic beyond that point is ignored completely.
+RSML is evaluated from **start to finish** _([see Advanced Representation of the Process Flow](#advanced-representation))_, meaning that the **very first** logic path **with a primary operator in it** that matches will be used and the evaluation ends there. All the logic beyond that point is ignored completely.
 
 ### Simplified Representation
 ``` mermaid
@@ -143,7 +145,7 @@ The syntax for this is quite simple.
 
 Things worth mentioning:
 
-* The operator **must** be one of the **3 defined in the standard you're using** ([*see Operators*](#operators)).
+* The operator **must** be one of the **3 defined in the standard you're using** _([see Operators](#operators))_.
 * The value _(argument)_ **must** be enclosed in **double quotes** (`"`).
 * **Spacing does not affect logic paths** (`win.+ -> "hey"` is the same as `win.+       ->"hey"`).
 
@@ -186,7 +188,7 @@ Things worth mentioning:
 
 
 ## Special Actions
-Special Actions ([see Language Specification](#language-specification)) are a partially-standardized feature of RSML, being responsible for evaluation-time modification to RSML aspects.
+Special Actions _([see Language Specification](#language-specification))_ are a partially-standardized feature of RSML, being responsible for evaluation-time modification to RSML aspects.
 
 !!! info "Built-in Special Action"
     [As noted in the language specification section](#language-specification), `@EndAll` is the only **immutable, built-in** special action in RSML:

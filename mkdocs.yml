@@ -8,6 +8,9 @@
 site_url: https://oceanapocalypsestudios.github.io/rsml-docs/
 site_name: Red Sea Markup Language
 
+# Copyright
+copyright: Copyright &copy; 2025  OceanApocalypseStudios
+
 # Linking to repo
 repo_url: https://github.com/OceanApocalypseStudios/rsml-docs/
 
@@ -15,6 +18,9 @@ repo_url: https://github.com/OceanApocalypseStudios/rsml-docs/
 theme:
   name: material
   custom_dir: overrides
+  font:
+    text: Roboto
+    code: Roboto Mono
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
@@ -49,7 +55,10 @@ theme:
     - search.share
 
     # Back to top button
-    - navigation.top
+    # Back to top seems to break on mobile
+    # Making the page look wider than it is
+    # It's weird and looks ugly so begone
+    #- navigation.top
 
     # Linked tabs
     - content.tabs.link
@@ -108,9 +117,9 @@ nav:
     - Python:
       - Getting Started: api/python/index.md
       - Reference: api/python/reference.md
-    - C++:
-      - Getting Started: api/cpp/index.md
-      - Reference: api/cpp/reference.md
+    #- C++:
+      #- Getting Started: api/cpp/index.md
+      #- Reference: api/cpp/reference.md
   - CLI:
     - RSML as a CLI: cli/index.md
     - Commands: cli/commands.md

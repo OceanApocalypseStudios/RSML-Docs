@@ -1091,100 +1091,6 @@ with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
 
               
             
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    C++
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_6">
-            <span class="md-nav__icon md-icon"></span>
-            C++
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/cpp/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Getting Started
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/cpp/reference/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Reference
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1571,7 +1477,7 @@ with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
 <p>The <code>.rsml</code> file extension is also fine, but <code>.rsea</code> is preferred.</p>
 <h2 id="evaluation">Evaluation<a class="headerlink" href="#evaluation" title="Permanent link">&para;</a></h2>
 <p>The <em>"evaluation"</em> is the act of going through every <strong>logic path</strong> and <strong>special action</strong> and evaluate the first, while running the second.</p>
-<p>If an evaluation encounters a <strong>primary operator</strong> (<a href="#operators">see Operators</a>) in a true logic path, its value is returned and evaluation ends there.</p>
+<p>If an evaluation encounters a <strong>primary operator</strong> <em>(<a href="#operators">see Operators</a>)</em> in a true logic path, its value is returned and evaluation ends there.</p>
 <h2 id="use-of-msbuild-rids">Use of MSBuild <abbr title="Runtime Identifiers">RIDs</abbr><a class="headerlink" href="#use-of-msbuild-rids" title="Permanent link">&para;</a></h2>
 <p><a href="https://learn.microsoft.com/en-us/dotnet/core/rid-catalog">MSBuild Runtime Identifiers</a> are used for identifying systems and <abbr title="Central Processing Unit">CPU</abbr> architectures in Red Sea.</p>
 <p>You'll need to know them in order to write <abbr title="Red Sea Markup Language">RSML</abbr>.</p>
@@ -1694,12 +1600,18 @@ with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
 </tbody>
 </table>
 <h2 id="evaluation-process-flow">Evaluation Process Flow<a class="headerlink" href="#evaluation-process-flow" title="Permanent link">&para;</a></h2>
-<p>See also: <a href="#logic-paths">Logic Path examples</a> | <a href="#special-actions">Special Action handling</a></p>
+<div class="admonition tip">
+<p class="admonition-title">See also</p>
+<ul>
+<li><a href="#logic-paths">Logic Path examples</a></li>
+<li><a href="#special-actions">Special Action handling</a></li>
+</ul>
+</div>
 <details class="info">
 <summary>Strictly markup</summary>
 <p>Despite the usage of wording such as <em>"return"</em> and <em>"interpret"</em>, <abbr title="Red Sea Markup Language">RSML</abbr> is <strong>purely declarative</strong> - it can <strong>not</strong> execute, compile or transpile code.</p>
 </details>
-<p><abbr title="Red Sea Markup Language">RSML</abbr> is evaluated from <strong>start to finish</strong> <em><a href="#advanced-representation">see Advanced Representation of the Process Flow</a></em>, meaning that the <strong>very first</strong> logic path <strong>with a primary operator in it</strong> that matches will be used and the evaluation ends there. All the logic beyond that point is ignored completely.</p>
+<p><abbr title="Red Sea Markup Language">RSML</abbr> is evaluated from <strong>start to finish</strong> <em>(<a href="#advanced-representation">see Advanced Representation of the Process Flow</a>)</em>, meaning that the <strong>very first</strong> logic path <strong>with a primary operator in it</strong> that matches will be used and the evaluation ends there. All the logic beyond that point is ignored completely.</p>
 <h3 id="simplified-representation">Simplified Representation<a class="headerlink" href="#simplified-representation" title="Permanent link">&para;</a></h3>
 <pre class="mermaid"><code>---
 title: Simplified Representation of the Evaluation Process Flow
@@ -1741,7 +1653,7 @@ flowchart LR
 <p>The syntax for this is quite simple.</p>
 <p>Things worth mentioning:</p>
 <ul>
-<li>The operator <strong>must</strong> be one of the <strong>3 defined in the standard you're using</strong> (<a href="#operators"><em>see Operators</em></a>).</li>
+<li>The operator <strong>must</strong> be one of the <strong>3 defined in the standard you're using</strong> <em>(<a href="#operators">see Operators</a>)</em>.</li>
 <li>The value <em>(argument)</em> <strong>must</strong> be enclosed in <strong>double quotes</strong> (<code>"</code>).</li>
 <li><strong>Spacing does not affect logic paths</strong> (<code>win.+ -&gt; "hey"</code> is the same as <code>win.+       -&gt;"hey"</code>).</li>
 </ul>
@@ -1786,7 +1698,7 @@ flowchart LR
 </div>
 </div>
 <h2 id="special-actions">Special Actions<a class="headerlink" href="#special-actions" title="Permanent link">&para;</a></h2>
-<p>Special Actions (<a href="#language-specification">see Language Specification</a>) are a partially-standardized feature of <abbr title="Red Sea Markup Language">RSML</abbr>, being responsible for evaluation-time modification to <abbr title="Red Sea Markup Language">RSML</abbr> aspects.</p>
+<p>Special Actions <em>(<a href="#language-specification">see Language Specification</a>)</em> are a partially-standardized feature of <abbr title="Red Sea Markup Language">RSML</abbr>, being responsible for evaluation-time modification to <abbr title="Red Sea Markup Language">RSML</abbr> aspects.</p>
 <div class="admonition info">
 <p class="admonition-title">Built-in Special Action</p>
 <p><a href="#language-specification">As noted in the language specification section</a>, <code>@EndAll</code> is the only <strong>immutable, built-in</strong> special action in <abbr title="Red Sea Markup Language">RSML</abbr>:</p>
@@ -1926,12 +1838,6 @@ flowchart LR
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M246.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L224 109.3l137.4 137.3c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160zm160 352-160-160c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L224 301.3l137.4 137.3c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3z"/></svg>
-  Back to top
-</button>
-        
       </main>
       
         <footer class="md-footer">
@@ -1979,6 +1885,10 @@ flowchart LR
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025  OceanApocalypseStudios
+    </div>
   
   
     Made with
@@ -2028,7 +1938,7 @@ flowchart LR
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer", "search.share", "navigation.top", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.expand", "navigation.path", "content.tooltips", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer", "search.share", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.expand", "navigation.path", "content.tooltips", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>

@@ -20,26 +20,47 @@ In the example below, RSML is used in the context of a package manager. The user
         * For the full code, see https://github.com/OceanApocalypseStudios/rsml-demos/
     */
 
+    string PACKAGE_NAME = "Example Package";
+
+    // Reading from the file
+    // (Assume we're passed a FileInfo named rsmlFile)
+    string data = File.ReadAllText(rsmlFile.FullName);
+
     // Creating the parser
     RSParser parser = new(data);
+
+    // Setting up the parser to match official-25
+    parser.DefineOperator(OperatorType.Primary, "->");
+    parser.DefineOperator(OperatorType.Secondary, "||");
+    parser.DefineOperator(OperatorType.Tertiary, "^!");
+
+    parser.RegisterAction(OperatorType.Secondary, (_, value) => Console.WriteLine(value));
+    parser.RegisterAction(OperatorType.Tertiary, (_, value) => throw new RSMLRuntimeException(value));
 
     // Parsing
     string? result = parser.EvaluateRSML(true) ??
         throw new EvaluateException($"No setup scripts found for this machine in {PACKAGE_NAME}.");
-
+    
     FileInfo file = new(result);
+
+    return !file.Exists ?
+        throw new FileNotFoundException("Such script does not exist.")
+        : file;
     ```
 
 === "Python"
     ```python linenums="1"
     import rsml_python
 
+    # Creating the executable
+    PATH_TO_EXE: str = ... # insert path here
+    RS_EXE: RedSeaCLIExecutable = RedSeaCLIExecutable(PATH_TO_EXE)
+
     # Creating the document
     doc: RedSeaDocument = RedSeaDocument()
     doc.load_from_string(data)
 
     # Loading the document into the executable
-    # Assuming we have an executable RS_EXE
     RS_EXE.load_document(doc)
 
     # Parsing

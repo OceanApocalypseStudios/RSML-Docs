@@ -4,37 +4,60 @@ The API reference for RSML in C# is organized by **namespace** and then **class*
 ## Overview
 * [`RSML`](RSML/index.md)
     - [`RSDocument`](RSML/RSDocument.md)
-        - [`#!c# EvaluateDocument()`](RSML/RSDocument.md#c-evaluatedocument)
-        - [`#!c# EvaluateDocument(string lineSeparation)`](RSML/RSDocument.md#c-evaluatedocumentstring-lineseparation)
-        - [`#!c# EvaluateDocument(bool expandAny, string? lineSeparation = null)`](RSML/RSDocument.md#c-evaluatedocumentbool-expandany-string-lineseparation--null)
-        - [`#!c# EvaluateDocument(string customRid, string? lineSeparation = null)`](RSML/RSDocument.md#c-evaluatedocumentstring-customrid-string-lineseparation--null)
-        - [`#!c# EvaluateDocument(string customRid, bool expandAny, string? lineSeparation = null)`](RSML/RSDocument.md#c-evaluatedocumentstring-customrid-bool-expandany-string-lineseparation--null)
-        - [`#!c# LoadRSMLFromFile(string filepath)`](RSML/RSDocument.md#c-loadrsmlfromfilestring-filepath)
-        - [`#!c# LoadRSMLFromFileAsync(string filepath)`](RSML/RSDocument.md#c-loadrsmlfromfileasyncstring-filepath)
-        - [`#!c# LoadRSMLFromFileIntoDocument(string filepath)`](RSML/RSDocument.md#c-loadrsmlfromfileintodocumentstring-filepath)
-        - [`#!c# NewFromFile(string filepath)`](RSML/RSDocument.md#c-newfromfilestring-filepath)
-        - [`#!c# RSDocument(string rsml)`](RSML/RSDocument.md#c-rsdocumentstring-rsml)
-        - [`#!c# RSDocument(StringReader reader)`](RSML/RSDocument.md#c-rsdocumentstringreader-reader)
-        - [`#!c# RSDocument(RSParser parser)`](RSML/RSDocument.md#c-rsdocumentrsparser-parser)
-        - [`#!c# SaveRSMLToFile(string filepath)`](RSML/RSDocument.md#c-saversmltofilestring-filepath)
-        - [`#!c# ToString()`](RSML/RSDocument.md#c-tostring)
+        - `#!c# EvaluateDocument()`
+        - `#!c# EvaluateDocument(string)`
+        - `#!c# EvaluateDocument(bool, string?)`
+        - `#!c# EvaluateDocument(string, string?)`
+        - `#!c# EvaluateDocument(string, bool, string?)`
+        - `#!c# LoadRSMLFromFile(string)`
+        - `#!c# LoadRSMLFromFileAsync(string)`
+        - `#!c# LoadRSMLFromFileIntoDocument(string)`
+        - `#!c# NewFromFile(string)`
+        - `#!c# RSDocument(string)`
+        - `#!c# RSDocument(StringReader)`
+        - `#!c# RSDocument(RSParser)`
+        - `#!c# SaveRSMLToFile(string)`
+        - `#!c# ToString()`
 
-* `RSML.Exceptions`
-    - `ImmutableActionException`
+* [`RSML.Exceptions`](RSML.Exceptions/index.md)
+    - [`ImmutableActionException`](RSML.Exceptions/ImmutableActionException.md)
         - `#!c# ImmutableActionException()`
-        - `#!c# ImmutableActionException(string message)`
-        - `#!c# ImmutableActionException(string? message, Exception? innerException)`
-    - `RSMLRuntimeException`
-        - `#!c# RSMLRuntimeException()`
-        - `#!c# RSMLRuntimeException(string message)`
-        - `#!c# RSMLRuntimeException(string? message, Exception? innerException)`
-    - `UndefinedActionException`
-        - `#!c# UndefinedActionException()`
-        - `#!c# UndefinedActionException(string message)`
-        - `#!c# UndefinedActionException(string? message, Exception? innerException)`
-    - `UndefinedSpecialException`
-        - `#!c# UndefinedSpecialException()`
-        - `#!c# UndefinedSpecialException(string message)`
-        - `#!c# UndefinedSpecialException(string? message, Exception? innerException)`
+        - `#!c# ImmutableActionException(string)`
+        - `#!c# ImmutableActionException(string?, Exception?)`
 
-* `RSML.Parser`
+    - [`RSMLRuntimeException`](RSML.Exceptions/RSMLRuntimeException.md)
+        - `#!c# RSMLRuntimeException()`
+        - `#!c# RSMLRuntimeException(string)`
+        - `#!c# RSMLRuntimeException(string?, Exception?)`
+
+    - [`UndefinedActionException`](RSML.Exceptions/UndefinedActionException.md)
+        - `#!c# UndefinedActionException()`
+        - `#!c# UndefinedActionException(string)`
+        - `#!c# UndefinedActionException(string?, Exception?)`
+
+    - [`UndefinedSpecialException`](RSML.Exceptions/UndefinedSpecialException.md)
+        - `#!c# UndefinedSpecialException()`
+        - `#!c# UndefinedSpecialException(string)`
+        - `#!c# UndefinedSpecialException(string?, Exception?)`
+
+* [`RSML.Parser`](RSML.Parser/index.md)
+    - [`OperatorType`](RSML.Parser/OperatorType.md)
+
+    - [`ReadyToGoParser`](RSML.Parser/ReadyToGoParser.md)
+        - `#!c# CreateMFRoadLike(string)`
+        - `#!c# CreateNew(string)`
+        - `#!c# CreateNewFromFilepath(string)`
+
+    - [`RSParser`](RSML.Parser/RSParser.md)
+        - `#!c# DefineOperator(OperatorType, string)`
+        - `#!c# EvaluateRSML(string)`
+        - `#!c# EvaluateRSML(bool, string)`
+        - `#!c# EvaluateRSMLWithCustomRid(string, string)`
+        - `#!c# EvaluateRSMLWithCustomRid(string, bool, string)`
+        - `#!c# RegisterAction(OperatorType, Action<RSParser, string>)`
+        - `#!c# RegisterSpecialFunction(string, Func<RSParser, string, byte>)`
+        - `#!c# RSParser(string)`
+        - `#!c# RSParser(StringReader)`
+        - `#!c# RSParser(RSDocument)`
+        - `#!c# RSParser(RSParser)`
+        - `#!c# ToString()`

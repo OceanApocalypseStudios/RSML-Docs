@@ -5,7 +5,7 @@ Represents a Red Sea Markup Language document.
 
 ## Hierarchy
 ```mermaid
-flowchart BT
+flowchart TB
     RSDocument --> System.Object
 ```
 
@@ -18,11 +18,11 @@ flowchart BT
 
 <!-- 1 -->
 
-### `#!c# RSDocument(string rsml)`
-Creates a new document from a string containing RSML.
+### `#!c# RSDocument(System.String rsml)`
+Creates a new document from a System.String containing RSML.
 
 #### Parameters
-`#!c# string rsml`
+`#!c# System.String rsml`
 
 :   The RSML data to load, in the form of a `#!c# System.String`.
 
@@ -42,7 +42,7 @@ Creates a new document from a `#!c# StringReader` containing RSML.
 Creates a new document from a already initialized parser.
 
 #### Parameters
-`#!c# RSParser parser`
+[`#!c# RSParser parser`](../RSML.Parser/RSParser.md)
 
 :   An instance of a Red Sea Markup Language parser.
 
@@ -55,11 +55,11 @@ Creates a new document from a already initialized parser.
 
 <!-- 1 -->
 
-### `#!c# LoadRSMLFromFileIntoDocument(string filepath)`
+### `#!c# LoadRSMLFromFileIntoDocument(System.String filepath)`
 Loads a RSML file into a `RSDocument`.
 
 #### Parameters
-`#!c# string filepath`
+`#!c# System.String filepath`
 
 :   The path to the file to load.
 
@@ -68,16 +68,17 @@ Loads a RSML file into a `RSDocument`.
 
 <!-- 2 -->
 
-### `#!c# NewFromFile(string filepath)`
+### `#!c# NewFromFile(System.String filepath)`
 Creates a new document from a filepath.
 
 #### Parameters
-`#!c# string filepath`
+`#!c# System.String filepath`
 
 :   The path to the file to load.
 
 #### Exceptions
 `#!c# FileNotFoundException`
+
 :   The file could not be located.
 
 #### Returns
@@ -88,35 +89,35 @@ Creates a new document from a filepath.
 ---
 
 ## Static Methods
-`RSDocument` contains 2 static _(non-factory)_ methods.
+`RSDocument` contains 3 static _(non-factory)_ methods.
 
-### `#!c# LoadRSMLFromFile(string filepath)`
-Loads a RSML file into a string.
+### `#!c# LoadRSMLFromFile(System.String filepath)`
+Loads a RSML file into a `System.String`.
 
 #### Parameters
-`#!c# string filepath`
+`#!c# System.String filepath`
 
 :   The path to the file to load.
 
 #### Returns
 **`System.String`** : The text contained in the file.
 
-### `#!c# LoadRSMLFromFileAsync(string filepath)`
-Loads a RSML file into a string, asynchronously.
+### `#!c# LoadRSMLFromFileAsync(System.String filepath)`
+Loads a RSML file into a System.String, asynchronously.
 
 #### Parameters
-`#!c# string filepath`
+`#!c# System.String filepath`
 
 :   The path to the file to load.
 
 #### Returns
 **`System.Threading.Tasks.Task<System.String>`** : The text contained in the file.
 
-### `#!c# SaveRSMLToFile(string filepath)`
+### `#!c# SaveRSMLToFile(System.String filepath)`
 Saves RSML into a file.
 
 #### Parameters
-`#!c# string filepath`
+`#!c# System.String filepath`
 
 :   The path to the file to write the RSML data to.
 
@@ -131,30 +132,30 @@ Parses and evaluates the document.
 #### Returns
 `System.String`
 
-:   The string matching the return value of the only match that had a primary operator.
+:   The System.String matching the return value of the only match that had a primary operator.
 
 `null`
 
 :   There were no primary matches.
 
-### `#!c# EvaluateDocument(string lineSeparation)`
+### `#!c# EvaluateDocument(System.String lineSeparation)`
 Parses and evaluates the document.
 
 #### Parameters
-`#!c# string lineSeparation`
+`#!c# System.String lineSeparation`
 
 :   The custom line separation character to use, instead of `#!c# System.Environment.NewLine`.
 
 #### Returns
 `System.String`
 
-:   The string matching the return value of the only match that had a primary operator.
+:   The System.String matching the return value of the only match that had a primary operator.
 
 `null`
 
 :   There were no primary matches.
 
-### `#!c# EvaluateDocument(bool expandAny, string? lineSeparation = null)`
+### `#!c# EvaluateDocument(bool expandAny, System.String? lineSeparation = null)`
 Parses and evaluates the document.
 
 #### Parameters
@@ -162,45 +163,45 @@ Parses and evaluates the document.
 
 :   If set to `#!c# true`, expands `any` into Regex expression `.+`, indicating that any RID will be a match.
 
-`#!c# string? lineSeparation = null`
+`#!c# System.String? lineSeparation = null`
 
 :   The custom line separation character to use, instead of `#!c# System.Environment.NewLine`. Defaults to `null`. If `null`, falls back to `#!c# System.Environment.NewLine`.
 
 #### Returns
 `System.String`
 
-:   The string matching the return value of the only match that had a primary operator.
+:   The System.String matching the return value of the only match that had a primary operator.
 
 `null`
 
 :   There were no primary matches.
 
-### `#!c# EvaluateDocument(string customRid, string? lineSeparation = null)`
+### `#!c# EvaluateDocument(System.String customRid, System.String? lineSeparation = null)`
 Parses and evaluates the document.
 
 #### Parameters
-`#!c# string customRid`
+`#!c# System.String customRid`
 
 :   A custom RID to pass to the parser, instead of the host's RID.
 
-`#!c# string? lineSeparation = null`
+`#!c# System.String? lineSeparation = null`
 
 :   The custom line separation character to use, instead of `#!c# System.Environment.NewLine`. Defaults to `null`. If `null`, falls back to `#!c# System.Environment.NewLine`.
 
 #### Returns
 `System.String`
 
-:   The string matching the return value of the only match that had a primary operator.
+:   The System.String matching the return value of the only match that had a primary operator.
 
 `null`
 
 :   There were no primary matches.
 
-### `#!c# EvaluateDocument(string customRid, bool expandAny, string? lineSeparation = null)`
+### `#!c# EvaluateDocument(System.String customRid, bool expandAny, System.String? lineSeparation = null)`
 Parses and evaluates the document.
 
 #### Parameters
-`#!c# string customRid`
+`#!c# System.String customRid`
 
 :   A custom RID to pass to the parser, instead of the host's RID.
 
@@ -208,14 +209,14 @@ Parses and evaluates the document.
 
 :   If set to `#!c# true`, expands `any` into Regex expression `.+`, indicating that any RID will be a match.
 
-`#!c# string? lineSeparation = null`
+`#!c# System.String? lineSeparation = null`
 
 :   The custom line separation character to use, instead of `#!c# System.Environment.NewLine`. Defaults to `null`. If `null`, falls back to `#!c# System.Environment.NewLine`.
 
 #### Returns
 `System.String`
 
-:   The string matching the return value of the only match that had a primary operator.
+:   The System.String matching the return value of the only match that had a primary operator.
 
 `null`
 

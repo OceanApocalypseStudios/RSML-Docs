@@ -1,16 +1,16 @@
 # Namespace Overview
 * [`RSDocument`](RSDocument.md)
-    - [`#!c# EvaluateDocument()`](RSDocument.md#c-evaluatedocument)
-    - [`#!c# EvaluateDocument(string lineSeparation)`](RSDocument.md#c-evaluatedocumentstring-lineseparation)
-    - [`#!c# EvaluateDocument(bool expandAny, string? lineSeparation = null)`](RSDocument.md#c-evaluatedocumentbool-expandany-string-lineseparation--null)
-    - [`#!c# EvaluateDocument(string customRid, string? lineSeparation = null)`](RSDocument.md#c-evaluatedocumentstring-customrid-string-lineseparation--null)
-    - [`#!c# EvaluateDocument(string customRid, bool expandAny, string? lineSeparation = null)`](RSDocument.md#c-evaluatedocumentstring-customrid-bool-expandany-string-lineseparation--null)
-    - [`#!c# LoadRSMLFromFile(string filepath)`](RSDocument.md#c-loadrsmlfromfilestring-filepath)
-    - [`#!c# LoadRSMLFromFileAsync(string filepath)`](RSDocument.md#c-loadrsmlfromfileasyncstring-filepath)
-    - [`#!c# LoadRSMLFromFileIntoDocument(string filepath)`](RSDocument.md#c-loadrsmlfromfileintodocumentstring-filepath)
-    - [`#!c# NewFromFile(string filepath)`](RSDocument.md#c-newfromfilestring-filepath)
-    - [`#!c# RSDocument(string rsml)`](RSDocument.md#c-rsdocumentstring-rsml)
-    - [`#!c# RSDocument(StringReader reader)`](RSDocument.md#c-rsdocumentstringreader-reader)
-    - [`#!c# RSDocument(RSParser parser)`](RSDocument.md#c-rsdocumentrsparser-parser)
-    - [`#!c# SaveRSMLToFile(string filepath)`](RSDocument.md#c-saversmltofilestring-filepath)
-    - [`#!c# ToString()`](RSDocument.md#c-tostring)
+    - `#!c# EvaluateDocument()`
+    - `#!c# EvaluateDocument(string)`
+    - `#!c# EvaluateDocument(bool, string?)`
+    - `#!c# EvaluateDocument(string, string?)`
+    - `#!c# EvaluateDocument(string, bool, string?)`
+    - `#!c# LoadRSMLFromFile(string)`
+    - `#!c# LoadRSMLFromFileAsync(string)`
+    - `#!c# LoadRSMLFromFileIntoDocument(string)`
+    - `#!c# NewFromFile(string)`
+    - `#!c# RSDocument(string)`
+    - `#!c# RSDocument(StringReader)`
+    - `#!c# RSDocument(RSParser)`
+    - `#!c# SaveRSMLToFile(string)`
+    - `#!c# ToString()`

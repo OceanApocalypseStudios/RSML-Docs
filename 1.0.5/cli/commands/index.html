@@ -109,6 +109,11 @@ with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#cli-commands" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1485,6 +1490,21 @@ with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Commands
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1497,6 +1517,87 @@ with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#global-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global Options
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluate" class="md-nav__link">
+    <span class="md-ellipsis">
+      evaluate
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="evaluate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roadlike" class="md-nav__link">
+    <span class="md-ellipsis">
+      roadlike
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-rid" class="md-nav__link">
+    <span class="md-ellipsis">
+      get-rid
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      repository
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1596,6 +1697,76 @@ with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#global-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global Options
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluate" class="md-nav__link">
+    <span class="md-ellipsis">
+      evaluate
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="evaluate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roadlike" class="md-nav__link">
+    <span class="md-ellipsis">
+      roadlike
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-rid" class="md-nav__link">
+    <span class="md-ellipsis">
+      get-rid
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      repository
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1614,9 +1785,126 @@ with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
   
 
 
-  <h1>Commands</h1>
-
-
+<h1 id="cli-commands"><abbr title="Commandline Interface">CLI</abbr> Commands<a class="headerlink" href="#cli-commands" title="Permanent link">&para;</a></h1>
+<p>In this page, you can find all of the available commands in the <abbr title="Commandline Interface">CLI</abbr>.</p>
+<h2 id="global-options">Global Options<a class="headerlink" href="#global-options" title="Permanent link">&para;</a></h2>
+<p>These are options that can be used globally and are compatible with all the commands.</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Datatype</th>
+<th>Description</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--no-pretty</code></td>
+<td><code>bool</code></td>
+<td>Disables colors and ASCII art.</td>
+<td><code>false</code> (Pretty Output defaults to enabled)</td>
+</tr>
+<tr>
+<td><code>--version</code></td>
+<td>N/A</td>
+<td>Returns the <abbr title="Commandline Interface">CLI</abbr>'s version.</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><code>--help</code> / <code>-?</code> / <code>-h</code></td>
+<td>N/A</td>
+<td>Shows the help message for the current command.</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="evaluate"><code>evaluate</code><a class="headerlink" href="#evaluate" title="Permanent link">&para;</a></h2>
+<p>This command evaluates <abbr title="Red Sea Markup Language">RSML</abbr> using the <a href="../../language/standards/official-25/"><code>official-25</code> language standard</a>.</p>
+<p>It reads the <abbr title="Red Sea Markup Language">RSML</abbr> data from the <code>stdin</code>.</p>
+<p><strong>Aliases:</strong></p>
+<ul>
+<li><code>eval</code></li>
+<li><code>parse</code></li>
+</ul>
+<h3 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Datatype</th>
+<th>Description</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-F</code> / <code>--antierror-fallback</code></td>
+<td><code>string</code></td>
+<td>A message to display when an error happens.</td>
+<td><code class="language-c# highlight"><span class="s">$&quot;[ERROR] User-triggered error occured -&gt; {value}&quot;</span></code></td>
+</tr>
+<tr>
+<td><code>-f</code> / <code>--antinull-fallback</code></td>
+<td><code>string</code></td>
+<td>A message to display when there are no matches.</td>
+<td><code class="language-c# highlight"><span class="s">&quot;[WARNING] No match was found.&quot;</span></code></td>
+</tr>
+<tr>
+<td><code>-r</code> / <code>--custom-rid</code> / <code>--rid</code></td>
+<td><code>string</code></td>
+<td>Custom <abbr title="Runtime Identifier">RID</abbr> to check against instead of the host's <abbr title="Runtime Identifier">RID</abbr>.</td>
+<td>Host's <abbr title="Runtime Identifier">RID</abbr></td>
+</tr>
+<tr>
+<td><code>-x</code> / <code>--expand-any</code></td>
+<td><code>bool</code></td>
+<td>Expands <code>any</code> into <code>.+</code>.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>-p</code> / <code>--primary-only</code></td>
+<td><code>bool</code></td>
+<td>Executes only the primary operator, if applicable.</td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="roadlike"><code>roadlike</code><a class="headerlink" href="#roadlike" title="Permanent link">&para;</a></h2>
+<p>This command evaluates <abbr title="Red Sea Markup Language">RSML</abbr> using the <a href="../../language/standards/roadlike/"><code>roadlike</code> language standard</a>.</p>
+<p>It reads the <abbr title="Red Sea Markup Language">RSML</abbr> data from the <code>stdin</code>.</p>
+<p><strong>Aliases:</strong></p>
+<ul>
+<li><code>emulate-mfroad</code></li>
+<li><code>mfroad-like</code></li>
+</ul>
+<p>It cannot be customized and uses the default values of the options in the <a href="#evaluate"><code>eval</code> command</a>.</p>
+<hr />
+<h2 id="get-rid"><code>get-rid</code><a class="headerlink" href="#get-rid" title="Permanent link">&para;</a></h2>
+<p>This command returns the host's <abbr title="Runtime Identifier">RID</abbr>.</p>
+<p><strong>Aliases:</strong></p>
+<ul>
+<li><code>get-runtime-id</code></li>
+<li><code>get-runtime-identifier</code></li>
+<li><code>rid-get</code></li>
+</ul>
+<hr />
+<h2 id="repository"><code>repository</code><a class="headerlink" href="#repository" title="Permanent link">&para;</a></h2>
+<p>This command returns a link to <a href="https://github.com/OceanApocalypseStudios/RedSeaMarkupLanguage/"><abbr title="Red Sea Markup Language">RSML</abbr>'s GitHub Repository</a>.</p>
+<p><strong>Aliases:</strong></p>
+<ul>
+<li><code>about</code></li>
+<li><code>github</code></li>
+<li><code>online</code></li>
+<li><code>repo</code></li>
+</ul>
+<!-- Copyright (c)  2025  OceanApocalypseStudios -->
+<!-- Permission is granted to copy, distribute and/or modify this document -->
+<!-- under the terms of the GNU Free Documentation License, Version 1.3 -->
+<!-- or any later version published by the Free Software Foundation; -->
+<!-- with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. -->
 
 
 

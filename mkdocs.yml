@@ -109,7 +109,8 @@ nav:
     - RSML as an API: api/index.md
     - Guides:
       - About our Guides: api/guides/index.md
-      - Evaluating RSML from file: api/guides/eval-from-file-1.md
+      - Easy:
+        - Hello, World!: api/guides/hello-world.md
     - Usage Demos: api/demos.md 
     - C#:
       - Getting Started: api/csharp/index.md

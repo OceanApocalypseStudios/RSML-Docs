@@ -50,7 +50,7 @@ In the example below, RSML is used in the context of a package manager. The user
 
 === "Python"
     ```python linenums="1"
-    import rsml_python
+    from rsml_python import RedSeaDocument, RedSeaCLIExecutable
 
     # Creating the executable
     PATH_TO_EXE: str = ... # insert path here
